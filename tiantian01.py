@@ -2,7 +2,7 @@
 '''
 Author: your name
 Date: 2021-09-08 20:39:56
-LastEditTime: 2021-09-08 23:47:48
+LastEditTime: 2021-09-12 10:59:19
 LastEditors: Please set LastEditors
 Description: In User Settings Edit
 FilePath: \0001\tiantian01.py
@@ -12,9 +12,8 @@ import numpy as np
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 x = np.linspace(0, 20, 100)
-plt.plot(x, np.sin(x))
+plt.plot(x,np.sin(x))
 #%%
-
 a = 1
 b = 1
 c = 1
