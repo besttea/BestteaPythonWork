@@ -1,0 +1,54 @@
+digraph G {
+    splines="TRUE";rankdir=LR;  
+
+    /* Entities */
+    node[shape=plaintext]
+     0 [label="Py处理Excel",shape=""]
+     1 [label="xlrd",shape=""]
+     2 [label="xlrw",shape=""]
+     11 [label="rd=open_workbook(f)"]
+     111 [label="打开表格"]
+     12 [label="rd.nsheets" ]
+     122 [label="获取表格多少个sheets" ]
+     13 [label="rd.sheets_names" ] 
+     133 [label="获取sheet名字" ] 
+     14 [label="rd.sheets_by_index().nrows/ncols" ] 
+     144 [label="获取单个sheet行，列总数" ] 
+     15 [label="rd.sheets_by_index().row()" ] 
+     155 [label="获取每一行内容" ] 
+     16 [label="rd.sheets_by_index().col()" ] 
+     166 [label="获取每一列内容" ] 
+     17 [label="rd.sheets_by_index().cell" ]     
+     177 [label="获取单元格内容" ]     
+    /* Relationships */
+    0 -> 1
+    0 -> 2
+    1->11->111
+    1->12->122
+    1->13->133
+    1->14->144
+    1->15->155
+    1->16->166
+    1->17->177
+
+     21 [label="wb=xlwt.Workbook()"]
+     211 [label="建立表格"]
+     22 [label="wsh=wb.add_sheet()" ]
+     222 [label="增加sheet" ]
+     23 [label="wsh.write()" ] 
+     233 [label="写入每一行" ] 
+     24 [label="wsh.save()" ] 
+     244 [label="生成Excel文件" ] 
+  
+    /* Relationships */
+
+    2->21->211
+    2->22->222
+    2->23->233
+    2->24->244
+ 
+    /* Ranks */
+    { rank=same; 11,12,13,14,15,16,17; };
+}
+
+
