@@ -1,7 +1,7 @@
 '''
 Author: your name
 Date: 2021-09-20 11:00:30
-LastEditTime: 2021-09-20 11:42:08
+LastEditTime: 2021-10-09 11:31:23
 LastEditors: Please set LastEditors
 Description: In User Settings Edit
 FilePath: \0001\流程图.py
@@ -99,4 +99,5 @@ dot = add_edges(nodes)
 print(dot.source)
 render_begin = datetime.now()
 print(str(render_begin) + " render_begin")
-dot.render('./file/db2-table.gv', view=True)
+dot.render('./file/db2-table.gv', view=True
+           )
