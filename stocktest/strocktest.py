@@ -1,7 +1,7 @@
 '''
 Author: your name
 Date: 2021-08-24 00:00:17
-LastEditTime: 2021-08-25 10:55:14
+LastEditTime: 2021-10-15 22:50:05
 LastEditors: Please set LastEditors
 Description: In User Settings Edit
 FilePath: \stocktest\strocktest.py
@@ -48,10 +48,16 @@ model_type = 1
 #加载数据
 #data = pd.read_csv('./datasets/SH600519.csv')  # 读取股票文件
 
-# 初始化pro接口
-pro = ts.pro_api('84a7d42ba53be1e345b15650d19116113087ad5440320b4c6b7b6c67')
+# 初始化tushare接口
+data=ts.get_hist_data('600848')
 
-# 拉取数据
+#
+#可以用tushare Pro接口
+#
+# pro = ts.pro_api('84a7d42ba53be1e345...............320b4c6b7b6c67')
+
+# pro拉取数据data
+''' 
 data = pro.daily(**{
     "ts_code": '600028.sh',
     "trade_date": "",
@@ -67,7 +73,12 @@ data = pro.daily(**{
     "low",
     "vol",
     "ts_code"
-])
+]) 
+'''
+#
+#重要提示：
+#此处需要增加处理数据得代码!!
+#
 print(data)
 #
 """
